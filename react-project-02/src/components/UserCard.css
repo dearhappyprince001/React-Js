@@ -1,0 +1,15 @@
+#user-image {
+  height: 250px;
+  width: 300px;
+  border-radius: 30%;
+}
+.user-container {
+  background-color: purple;
+  color: black;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
