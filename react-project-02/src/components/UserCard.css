@@ -1,7 +1,7 @@
 #user-image {
   height: 250px;
   width: 300px;
-  border-radius: 30%;
+  border-radius: 10%;
 }
 .user-container {
   background-color: purple;
@@ -12,4 +12,6 @@
   flex-direction: column;
   gap: 1.5rem;
   align-items: center;
+  margin: 20px;
+  border-radius: 10px;
 }

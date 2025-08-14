@@ -3,7 +3,7 @@ function App() {
   return (
     <div className="container">
       <UserCard name="happy" desc="desc1" />
-      <UserCard name="vinay" desc="desc2" />
+      <UserCard name="Raju" desc="desc2" />
       <UserCard name="Prince" desc="desc3" />
     </div>
   );
