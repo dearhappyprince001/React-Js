@@ -2,7 +2,7 @@ import { useState } from "react";
 import Card from "./components/Card";
 import Button from "./components/Button";
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0); //create a state variable.
 
   function handleClick() {
     setCount(count + 1);

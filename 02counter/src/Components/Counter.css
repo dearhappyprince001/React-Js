@@ -7,3 +7,8 @@
   border: 3px solid black;
   border-radius: 10px;
 }
+#btn {
+  width: 300px;
+  padding: 10px;
+  margin: 20px;
+}
