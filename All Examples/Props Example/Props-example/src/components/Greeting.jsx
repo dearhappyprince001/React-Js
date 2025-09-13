@@ -1,4 +1,4 @@
-import React from "react";
+//Props (short for properties) is a way to send or transfer the data from parent component to its child component.Props are immutable and Props can not be modified by the child components.
 
 const Greeting = (props) => {
   return (

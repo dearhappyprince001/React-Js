@@ -2,6 +2,7 @@
 // It provides a simple and efficient way to manage form state, validation, and submission.
 //To install react-hook-form use use the command:
 // ---> npm install react-hook-form
+//this command runs once on your project before npm run dev command.
 import "./App.css";
 import { useForm } from "react-hook-form";
 
@@ -22,10 +23,10 @@ function App() {
 
   //Note: For Styling purpose we need to add classes in the input fields and error messages.
 
+  //Create a useForm Hook.
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors, isSubmitting },
   } = useForm();
 
@@ -39,6 +40,8 @@ function App() {
     await new Promise((resolve) => setTimeout(resolve, 5000));
     console.log("Submitting the form", data);
   }
+
+  //Note: Required field prevents the user from leaving the field empty.
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -61,20 +64,31 @@ function App() {
         <br />
         <div>
           <label>Middle Name:</label>
-          <input {...register("middleName")} />
+          <input
+            className={errors.middleName ? "input-error" : ""}
+            {...register("middleName", {
+              required: true,
+              minLength: { value: 4, message: "Min length at least 4" },
+              maxLength: { value: 8, message: "Max length at most 8" },
+            })}
+          />
+          {/* Handling error message if there is an error in the middleName field and add a className for styling purpose. */}
+          {errors.middleName && (
+            <p className="error-message">{errors.middleName.message}</p>
+          )}
         </div>
         <br />
         <div>
           <label>Last Name:</label>
           <input
             {...register("lastName", {
+              required: true,
               pattern: {
                 value: /^[A-Za-z]+$/,
                 message: "Last Name is not as per the rules",
               }, //we can also use pattern validation rule to validate the input field with regular expression.
             })}
           />
-
           {/* Handling error message if there is an error in the lastName field and for styling we add a className. */}
           {errors.lastName && (
             <p className="error-message">{errors.lastName.message}</p>

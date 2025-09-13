@@ -1,37 +1,32 @@
-import React from "react";
-
-//This is prop drilling → App → Parent → Child → Profile.
+//This is prop drilling → App → Child → GrandChild → Profile.
 
 //App has User Data.
 function App() {
-  const user = { name: "Amit", role: "Developer" };
+  const user = { name: "Amit", role: "Developer", location: "Noida" };
 
   return (
     <div>
       <h1>Welcome to The App</h1>
-      {/* Passing user down through Parent */}
-      <Parent user={user} />
-    </div>
-  );
-}
-
-//Parent doesn’t need it but still passes it.
-function Parent({ user }) {
-  return (
-    <div>
-      <h2>Parent Component</h2>
-      {/* Passing user down to Child */}
       <Child user={user} />
     </div>
   );
 }
 
-//Child also doesn’t need it but still passes it.
+//Child doesn’t need it but still passes it.
 function Child({ user }) {
   return (
     <div>
+      <h2>Child Component</h2>
+      <GrandChild user={user} />
+    </div>
+  );
+}
+
+//GrandChild also doesn’t need it but still passes it.
+function GrandChild({ user }) {
+  return (
+    <div>
       <h3>Child Component</h3>
-      {/* Passing user down to Profile */}
       <Profile user={user} />
     </div>
   );
@@ -44,6 +39,7 @@ function Profile({ user }) {
       <h4>Profile Component</h4>
       <p>Name:{user.name}</p>
       <p>Role:{user.role}</p>
+      <p>Location:{user.location}</p>
     </div>
   );
 }

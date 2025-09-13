@@ -6,9 +6,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"; //import
 import Home from "./components/Home";
 import About from "./components/About";
 import DashboardPage from "./components/DashboardPage";
+import Contact from "./components/Contact";
 import NavBar from "./components/Navbar";
 
-//Step1:create Router.
+//Step1:create a Router.
 //Each route is defined by an object with a path and an element to render when that path is accessed.
 const router = createBrowserRouter([
   {
@@ -43,6 +44,17 @@ const router = createBrowserRouter([
       </div>
     ),
   }, //this is 3rd route object
+
+  {
+    path: "/contact",
+    // element: <Contact />,
+    element: (
+      <div>
+        <NavBar />
+        <Contact />
+      </div>
+    ),
+  }, //this is 4th route object
 ]);
 
 function App() {

@@ -1,5 +1,3 @@
-import React from "react";
-
 function ChildA({ input, setInput }) {
   return (
     <div>

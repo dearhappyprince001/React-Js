@@ -27,10 +27,10 @@ function App() {
   // );
 
   //4. Using early return
-  if (!isLoggedIn) {
-    return <LoginBtn />;
-  }
-  return <LogoutBtn />;
+  // if (!isLoggedIn) {
+  //   return <LoginBtn />;
+  // }
+  // return <LogoutBtn />;
 }
 
 export default App;
