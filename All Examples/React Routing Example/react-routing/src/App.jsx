@@ -16,7 +16,7 @@ const router = createBrowserRouter([
         <Home />
       </div>
     ),
-  },
+  }, //1st route object.
 
   {
     path: "/about",
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         <AboutUs />
       </div>
     ),
-  },
+  }, //2nd route object.
 
   {
     path: "/contact",
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         <Contact />
       </div>
     ),
-  },
+  }, //3rd route object.
 
   {
     path: "/dashboard",
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
         <Dashboard />
       </div>
     ),
-  },
+  }, //4th route object.
 ]);
 
 function App() {

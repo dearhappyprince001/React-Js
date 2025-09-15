@@ -1,6 +1,6 @@
 //useCounter is a custom hook.
 
-//A custom hook is just a JavaScript function that Can call built-in React hooks like useState, useEffect, useContext and Always starts with the prefix use (like useCounter, useFetch).
+//A custom hook is a user-defined JavaScript function that can uses/calls built-in React hooks like useState, useEffect, useContext and Always starts with the prefix use (like useCounter, useFetch).
 
 import { useState } from "react";
 

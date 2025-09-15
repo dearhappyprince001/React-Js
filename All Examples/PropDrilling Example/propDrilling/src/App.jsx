@@ -1,6 +1,6 @@
 //This is prop drilling → App → Child → GrandChild → Profile.
 
-//App has User Data.
+//App is a parent component that has User Data.
 function App() {
   const user = { name: "Amit", role: "Developer", location: "Noida" };
 
